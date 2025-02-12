@@ -18,11 +18,11 @@ var arrayMusica = [
     
     Song(id : 4, name: "Fácil",artist: "Krawk .ft Léozin", capa: "https://images.genius.com/4ba9e0652bbc4c17af7a56e3e4fcce46.1000x1000x1.png" ),
     
-    Song(id : 5, name: "Fácil",artist: "Krawk .ft Léozin", capa: "https://images.genius.com/4ba9e0652bbc4c17af7a56e3e4fcce46.1000x1000x1.png" ),
+    Song(id : 5, name: "Amex",artist: "Krawk", capa: "https://i.scdn.co/image/ab67616d00001e02fcae793ff3fafb7f4377c23c" ),
     
-    Song(id : 6, name: "Fácil",artist: "Krawk .ft Léozin", capa: "https://images.genius.com/4ba9e0652bbc4c17af7a56e3e4fcce46.1000x1000x1.png" ),
+    Song(id : 6, name: "PlayBoy",artist: "Krawk .ft Léozin", capa: "https://i.scdn.co/image/ab67616d00001e02f1f077fbaefa676ee984f010" ),
     
-    Song(id : 7, name: "Fácil",artist: "Krawk .ft Léozin", capa: "https://images.genius.com/4ba9e0652bbc4c17af7a56e3e4fcce46.1000x1000x1.png" ),
+    Song(id : 7, name: "Melhor Não",artist: "Krawk", capa: "https://i.scdn.co/image/ab67616d0000b27366d2552ff423a5c5541dec99" ),
     
     Song(id : 8, name: "Fácil",artist: "Krawk .ft Léozin", capa: "https://images.genius.com/4ba9e0652bbc4c17af7a56e3e4fcce46.1000x1000x1.png" ),
     
@@ -47,17 +47,26 @@ struct ContentView: View {
                 LinearGradient(colors: [.blue, .black],
                                startPoint: .top,
                                endPoint: .center)
+                .ignoresSafeArea()
                 
                 
                 
                 VStack{
                     
                     VStack{
-                        Image("bubu")
-                            .resizable()
-                            .frame(width: 200, height: 200, alignment: .bottom)
                         
-                        Text("Hacka FM")
+                        AsyncImage(url: URL(string: "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO4eLVlv-default.jpg")) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        } placeholder: {
+                            Color.gray
+                        }
+                        .frame(width: 200, height: 200, alignment: .leading)
+                    
+                        
+                        
+                        Text("This Is Krawk")
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .foregroundStyle(.white)
                             .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
@@ -69,7 +78,7 @@ struct ContentView: View {
                             .resizable()
                             .frame(width: 20, height: 20, alignment: .bottom)
                         
-                        Text("Hacka FM")
+                        Text("Krawk FM")
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .foregroundStyle(.white)
                             .font(.title3)
@@ -134,9 +143,9 @@ struct ContentView: View {
                 
                 
             }
+
             
         }
-        
     }
     
 }
