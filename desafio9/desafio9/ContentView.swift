@@ -25,16 +25,16 @@ struct Location : Hashable{
 
 struct ContentView: View {
     
-    @State  var name1 = ""
-    @State  var flag1 = ""
-    @State  var latitude1 = 0.0
-    @State  var longitude1 = 0.0
-    @State  var description1 = ""
+    @State  var name1 = "Cristo Redentor"
+    @State  var flag1 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYe2y13w_yGA_Ad3CWjUBkQnwwNK5Ah1MOXw&s"
+    @State  var latitude1 = -22.951804
+    @State  var longitude1 = -43.210760
+    @State  var description1 = "Cristo Redentor é uma estátua que retrata Jesus Cristo localizada no topo do morro do Corcovado, a 709 metros acima do nível do mar, dentro do Parque Nacional da Tijuca."
     
     
     @State private var position = MapCameraPosition.region(
         MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: -18.7348, longitude:-47.4963),
+            center: CLLocationCoordinate2D(latitude: -22.951804, longitude:-43.210760),
             span: MKCoordinateSpan(latitudeDelta:1, longitudeDelta:1)
             
         )
@@ -106,27 +106,23 @@ struct ContentView: View {
         
         
         
-        
+       
         ZStack {
             
             VStack{
-            
-            
                 
+               
                     Picker(selection: $selectedLoc, label: Text("Select Localization")) {
                         ForEach(arrayLoc.indices, id: \.self) { index in
                             Text(arrayLoc[index].name).tag(index)
                         }
                         .pickerStyle(MenuPickerStyle())
-                        .frame(width: 300)
+                        .frame(width: 100)
                         .padding()
-                        .background(Color.yellow.opacity(0.8))
+                        .background(Color.white.opacity(0.8))
                         .cornerRadius(8)
                         
-                        
-                        
-                        
-                    }.onChange(of: selectedLoc) {
+                        }.onChange(of: selectedLoc) {
                         newIndex in
                         
                         name1 = arrayLoc[newIndex].name
@@ -146,21 +142,26 @@ struct ContentView: View {
                     
                         
                     }
+                
+                
+                    Map(position: $position){
+                        ForEach(arrayLoc, id: \.self){ item in
+                            Annotation(item.name, coordinate:
+                                        CLLocationCoordinate2D(latitude: item.latitude,
+                                                               longitude: item.longitude),
+                                       content: {
+                                Image(systemName: "pin.fill")
+                                    .font(.system(size: 25))
+                                    .foregroundColor(.red)
+                                
+                            })
+                        }
+                        
+                        
+                    }
+                    
+                
 
-                
-                    
-                    
-                
-                
-                   
-                
-                
-                Map(position: $position)
-                    .ignoresSafeArea()
-                
-                
-                
-                Text("\(name1)")
                 
                 Button("Maravilhas do Mundo Moderno") {
                     shouldPresentSheet.toggle()

@@ -9,9 +9,6 @@ import SwiftUI
 
 struct SheetView: View {
     @State private var color: Color = .yellow
-    @State private var imagemURL: String = "URL DA IMAGEM"
-    @State private var titulo: String = "TÍTULO AQUI"
-    @State private var descricao: String = "DESCRIÇÃO AQUI"
     
     @State  var name = ""
     @State  var flag = ""
@@ -21,66 +18,47 @@ struct SheetView: View {
 
     
     var body: some View {
-        Text("\(name)")
         ZStack{
             color.ignoresSafeArea()
             
             VStack{
                 
-                HStack{
+             
                     
                     
     
                     AsyncImage(url: URL(string: flag)) { image in image
                             .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 300, height: 200, alignment: .leading)
+                            .frame(width: 300, height: 250)
+                            
                             
                     } placeholder: {
                         Color.gray
                     }
-                    .frame(width: 300, height: 200, alignment: .leading)
+                
                     
-                    
-                    
-                    
-                }
-                Spacer()
-                    .frame(height: 50)
-                HStack{
+                  
+                
                     Text(name)
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                         .foregroundColor(.gray)
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                }
-                Spacer()
-                    .frame(height: 50)
-                HStack{
+                
+                    
+                
                     Text(description)
-                }
-                .frame(width: 320, height: 380)
-                .padding()
-                .background(Color.gray.opacity(0.8))
-                .cornerRadius(8)
+                    .frame(width: 320, height: 380)
+                    .padding()
+                    .background(Color.gray.opacity(0.8))
+                    .cornerRadius(8)
                 
                 
                 
             }
             
             
-            VStack{
-                
-            }
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
+    
             
         }
 
@@ -91,6 +69,6 @@ struct SheetView: View {
 }
 
 #Preview {
-    SheetView(name:"", flag:"", latitude:0.0, longitude:0.0, description:"")
+    SheetView(name:"", flag:"https://lh3.googleusercontent.com/p/AF1QipPTxHG0_dJooayYKzCB004tccRM5MhxYp6KWa53=s1360-w1360-h1020", latitude:0.0, longitude:0.0, description:"")
 }
 
