@@ -56,7 +56,7 @@ struct ContentView: View {
                 
                 
                 HStack{
-                    AsyncImage(url: URL(string: selectedLoc[0].abilities![0].displayIcon)) { image in image
+                    AsyncImage(url: URL(string: selectedLoc.abilities![0].displayIcon)) { image in image
                             .resizable()
                             .frame(width: 50, height: 50)
                     } placeholder: {
@@ -65,7 +65,7 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    AsyncImage(url: URL(string: selectedLoc[0].abilities![1].displayIcon)) { image in image
+                    AsyncImage(url: URL(string: selectedLoc.abilities![1].displayIcon)) { image in image
                             .resizable()
                             .frame(width: 50, height: 50)
                     } placeholder: {
@@ -74,7 +74,7 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    AsyncImage(url: URL(string: selectedLoc[0].abilities![2].displayIcon)) { image in image
+                    AsyncImage(url: URL(string: selectedLoc.abilities![2].displayIcon)) { image in image
                             .resizable()
                             .frame(width: 50, height: 50)
                     } placeholder: {
@@ -84,7 +84,7 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    AsyncImage(url: URL(string: selectedLoc[0].abilities![3].displayIcon)) { image in image
+                    AsyncImage(url: URL(string: selectedLoc.abilities![3].displayIcon)) { image in image
                             .resizable()
                             .frame(width: 50, height: 50)
                     } placeholder: {
