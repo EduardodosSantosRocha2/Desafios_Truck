@@ -56,7 +56,7 @@ struct ContentView: View {
                 
                 
                 HStack{
-                    AsyncImage(url: URL(string: displayIconA)) { image in image
+                    AsyncImage(url: URL(string: selectedLoc[0].abilities![0].displayIcon)) { image in image
                             .resizable()
                             .frame(width: 50, height: 50)
                     } placeholder: {
@@ -65,7 +65,7 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    AsyncImage(url: URL(string: displayIconA)) { image in image
+                    AsyncImage(url: URL(string: selectedLoc[0].abilities![1].displayIcon)) { image in image
                             .resizable()
                             .frame(width: 50, height: 50)
                     } placeholder: {
@@ -74,7 +74,7 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    AsyncImage(url: URL(string: "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png")) { image in image
+                    AsyncImage(url: URL(string: selectedLoc[0].abilities![2].displayIcon)) { image in image
                             .resizable()
                             .frame(width: 50, height: 50)
                     } placeholder: {
@@ -84,7 +84,7 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    AsyncImage(url: URL(string: "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png")) { image in image
+                    AsyncImage(url: URL(string: selectedLoc[0].abilities![3].displayIcon)) { image in image
                             .resizable()
                             .frame(width: 50, height: 50)
                     } placeholder: {
