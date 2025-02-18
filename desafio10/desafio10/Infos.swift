@@ -9,77 +9,54 @@ import SwiftUI
 
 struct Infos: View {
     
-    @State var displayName = "Gekko"
-    @State var  description = "Gekko the Angeleno leads a tight-knit crew of calamitous creatures. His buddies bound forward, scattering enemies out of the way, with Gekko chasing them down to regroup and go again."
+    @State var slot = ""
+    @State var  displayName = ""
+    @State var description = ""
+    @State var  displayIcon = ""
+    
+    
+    
     var body: some View {
+        
+    
+        
+        
         ZStack{
-            
+            Color.bluedark.ignoresSafeArea()
             VStack {
                 
-                Text("\(displayName)").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                Text("\(slot)").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.white)
+                Text("\(displayName)").font(.title2).foregroundColor(.white)
                 
                 
                 
-                AsyncImage(url: URL(string: "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png")) { image in image
+                AsyncImage(url: URL(string: displayIcon)) { image in image
                         .resizable()
-                        .frame(width: 300, height: 250)
+                        .frame(width: 200, height: 230)
                         .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                 } placeholder: {
                     Color.gray
+                }.padding()
+
+                
+                ScrollView{
+                    Text(description)
+                        .frame(width: 300, height: 200)
+                        .padding()
+                        .background(Color.gray.opacity(0.8))
+                        .cornerRadius(8)
+                        .foregroundColor(.white)
+                    
+                    
                 }
                 
                 
-                Text(description)
-                    .frame(width: 300, height: 200)
-                    .padding()
-                    .background(Color.gray.opacity(0.8))
-                    .cornerRadius(8)
-                
-                
-                
-                
-                
-                HStack{
-                    AsyncImage(url: URL(string: "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png")) { image in image
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                    } placeholder: {
-                        Color.gray
-                    }
-                    
-                    Spacer()
-                    
-                    AsyncImage(url: URL(string: "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png")) { image in image
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                    } placeholder: {
-                        Color.gray
-                    }
-                    
-                    Spacer()
-                    
-                    AsyncImage(url: URL(string: "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png")) { image in image
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                    } placeholder: {
-                        Color.gray
-                    }
-                    
-                    
-                    Spacer()
-                    
-                    AsyncImage(url: URL(string: "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png")) { image in image
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                    } placeholder: {
-                        Color.gray
-                    }
-                }.padding()
+               
             }
         }
     }
 }
 
 #Preview {
-    Infos()
+    Infos(slot:"", displayName:"", description:"", displayIcon: "")
 }

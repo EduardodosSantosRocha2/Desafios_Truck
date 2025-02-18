@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C77044CE2D64AE3C009D8BC5 /* personagens.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77044CD2D64AE3C009D8BC5 /* personagens.swift */; };
+		C77044D02D64B675009D8BC5 /* abilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77044CF2D64B675009D8BC5 /* abilities.swift */; };
+		C77044D22D64C6E8009D8BC5 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77044D12D64C6E8009D8BC5 /* Video.swift */; };
 		C796E9002D6359BF00C37F5B /* desafio10App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796E8FF2D6359BF00C37F5B /* desafio10App.swift */; };
 		C796E9022D6359BF00C37F5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796E9012D6359BF00C37F5B /* ContentView.swift */; };
 		C796E9042D6359C100C37F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C796E9032D6359C100C37F5B /* Assets.xcassets */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C77044CD2D64AE3C009D8BC5 /* personagens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personagens.swift; sourceTree = "<group>"; };
+		C77044CF2D64B675009D8BC5 /* abilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = abilities.swift; sourceTree = "<group>"; };
+		C77044D12D64C6E8009D8BC5 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C796E8FC2D6359BF00C37F5B /* desafio10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafio10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C796E8FF2D6359BF00C37F5B /* desafio10App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio10App.swift; sourceTree = "<group>"; };
 		C796E9012D6359BF00C37F5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +113,8 @@
 				C796E92B2D63621D00C37F5B /* File.swift */,
 				C796E92D2D6362C600C37F5B /* ViewModel.swift */,
 				C796E92F2D636D1E00C37F5B /* Infos.swift */,
+				C77044CD2D64AE3C009D8BC5 /* personagens.swift */,
+				C77044D12D64C6E8009D8BC5 /* Video.swift */,
 			);
 			path = desafio10;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				C796E9062D6359C100C37F5B /* Preview Assets.xcassets */,
+				C77044CF2D64B675009D8BC5 /* abilities.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -267,8 +276,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C796E9022D6359BF00C37F5B /* ContentView.swift in Sources */,
+				C77044D02D64B675009D8BC5 /* abilities.swift in Sources */,
+				C77044CE2D64AE3C009D8BC5 /* personagens.swift in Sources */,
 				C796E92C2D63621D00C37F5B /* File.swift in Sources */,
 				C796E9302D636D1E00C37F5B /* Infos.swift in Sources */,
+				C77044D22D64C6E8009D8BC5 /* Video.swift in Sources */,
 				C796E92E2D6362C600C37F5B /* ViewModel.swift in Sources */,
 				C796E9002D6359BF00C37F5B /* desafio10App.swift in Sources */,
 			);
