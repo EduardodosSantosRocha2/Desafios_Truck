@@ -1,0 +1,222 @@
+[
+    {
+        "id": "ef453ef868a63a6f",
+        "type": "tab",
+        "label": "Teste",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "422763d2329fc780",
+        "type": "http in",
+        "z": "ef453ef868a63a6f",
+        "name": "",
+        "url": "/postdudu",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "85d65849cdfe70e0",
+                "eae995c5d98d2124"
+            ]
+        ]
+    },
+    {
+        "id": "f3ec654746cf9e40",
+        "type": "http response",
+        "z": "ef453ef868a63a6f",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 470,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "85d65849cdfe70e0",
+        "type": "cloudantplus out",
+        "z": "ef453ef868a63a6f",
+        "name": "",
+        "cloudant": "0667a932ca088a0a",
+        "database": "db_dudu_04",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 290,
+        "y": 120,
+        "wires": [
+            [
+                "f3ec654746cf9e40"
+            ]
+        ]
+    },
+    {
+        "id": "a95c66745426aafa",
+        "type": "http in",
+        "z": "ef453ef868a63a6f",
+        "name": "",
+        "url": "/getdudu",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "47eb7936bac3d596"
+            ]
+        ]
+    },
+    {
+        "id": "f59fb3397c5ff756",
+        "type": "http response",
+        "z": "ef453ef868a63a6f",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 470,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "47eb7936bac3d596",
+        "type": "cloudantplus in",
+        "z": "ef453ef868a63a6f",
+        "name": "",
+        "cloudant": "0667a932ca088a0a",
+        "database": "db_dudu_04",
+        "service": "_ext_",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 290,
+        "y": 220,
+        "wires": [
+            [
+                "f59fb3397c5ff756"
+            ]
+        ]
+    },
+    {
+        "id": "eae995c5d98d2124",
+        "type": "split",
+        "z": "ef453ef868a63a6f",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "85d65849cdfe70e0"
+            ]
+        ]
+    },
+    {
+        "id": "5df12d0731e78dd4",
+        "type": "http in",
+        "z": "ef453ef868a63a6f",
+        "name": "",
+        "url": "deldudu",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 440,
+        "wires": [
+            [
+                "b9f129a6ee8d558e"
+            ]
+        ]
+    },
+    {
+        "id": "b568b6bcb4a9726a",
+        "type": "http response",
+        "z": "ef453ef868a63a6f",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 470,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b9f129a6ee8d558e",
+        "type": "cloudantplus out",
+        "z": "ef453ef868a63a6f",
+        "name": "",
+        "cloudant": "0667a932ca088a0a",
+        "database": "db_dudu_04",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "delete",
+        "x": 270,
+        "y": 440,
+        "wires": [
+            [
+                "b568b6bcb4a9726a"
+            ]
+        ]
+    },
+    {
+        "id": "d0b9b33480664d58",
+        "type": "http in",
+        "z": "ef453ef868a63a6f",
+        "name": "",
+        "url": "/putdudu",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 340,
+        "wires": [
+            [
+                "d6df314cac6e8c1d"
+            ]
+        ]
+    },
+    {
+        "id": "cd164bc20d2255ed",
+        "type": "http response",
+        "z": "ef453ef868a63a6f",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 470,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d6df314cac6e8c1d",
+        "type": "cloudantplus out",
+        "z": "ef453ef868a63a6f",
+        "name": "",
+        "cloudant": "0667a932ca088a0a",
+        "database": "db_dudu_04",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 270,
+        "y": 340,
+        "wires": [
+            [
+                "cd164bc20d2255ed"
+            ]
+        ]
+    },
+    {
+        "id": "0667a932ca088a0a",
+        "type": "cloudantplus",
+        "host": "https://f1c0dcf9-5075-4061-a1f8-2f4ca596058a-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "apidudu",
+        "useapikey": true
+    }
+]
