@@ -10,7 +10,7 @@ class ViewModel: ObservableObject {
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let parametros = ["nome": "João", "idade": 25] as [String : Any]
+        let parametros = ["nome": "Joao", "idade": 25] as [String : Any]
         request.httpBody = try? JSONSerialization.data(withJSONObject: parametros)
         
         URLSession.shared.dataTask(with: request) { data, _, _ in

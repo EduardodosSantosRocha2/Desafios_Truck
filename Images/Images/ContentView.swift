@@ -22,6 +22,7 @@ struct ContentView: View {
           
                 Circle()
                     .fill(Color.gray.opacity(0.3))
+                    .scaledToFit()
                     .frame(width: 300, height: 200)
             }
             
