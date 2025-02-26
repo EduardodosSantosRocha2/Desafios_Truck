@@ -5,15 +5,12 @@ struct ContentView: View {
     @State private var avatarItem: PhotosPickerItem?
     @State private var avatarImage: UIImage?
     @State private var base64: String = ""
+    @StateObject var viewModel = ViewModel()
     
     var body: some View {
         
         VStack {
-            PhotosPicker("Selecione a Imagem", selection: $avatarItem, matching: .images)
-                .accentColor(.white)
-                .padding()
-                .background(Color.gray)
-                .cornerRadius(10)
+            
             
             if let avatarImage = avatarImage {
                 Image(uiImage: avatarImage)
@@ -27,6 +24,24 @@ struct ContentView: View {
                     .fill(Color.gray.opacity(0.3))
                     .frame(width: 300, height: 200)
             }
+            
+            PhotosPicker("Selecione a Imagem", selection: $avatarItem, matching: .images)
+                .accentColor(.white)
+                .padding()
+                .background(Color.azulGrafite)
+                .cornerRadius(10)
+            
+            VStack {
+                if let jsonResponse = viewModel.jsonResponse {
+                    Text("Resposta: \(String(describing: jsonResponse))").padding()
+                    
+                }
+            } .padding()
+              .frame(width: 350, height: 300)
+              .background(.respostaGrafite)
+              .cornerRadius(7)
+              
+             
         
         }
         .padding()
@@ -37,7 +52,7 @@ struct ContentView: View {
                     if let uiImage = UIImage(data: data){
                         avatarImage = uiImage
                         base64 = data.base64EncodedString()
-                        print("\(base64)")
+                        viewModel.fetchJSON(base64: base64)
                     }
                     
                 } else {
