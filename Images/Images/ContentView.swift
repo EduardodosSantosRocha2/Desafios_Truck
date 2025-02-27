@@ -34,13 +34,14 @@ struct ContentView: View {
             
             VStack {
                 if let jsonResponse = viewModel.jsonResponse {
-                    Text("Resposta: \(String(describing: jsonResponse))").padding()
-                    
+                    if let jsondict = jsonResponse as? [String:Any]{
+                        Text("A celulula é \(String(describing: jsondict["predict"] ?? "")).").padding()
+                    }
                 }
             } .padding()
-              .frame(width: 350, height: 300)
+              .frame(width: 350, height: 230)
               .background(.respostaGrafite)
-              .cornerRadius(7)
+              .cornerRadius(20)
               
              
         

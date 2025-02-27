@@ -21,7 +21,6 @@ struct Video: View {
                     .cornerRadius(15)
                     .frame(width: 350, height: 250)
                     .padding()
-                    
         }
     }
 }
