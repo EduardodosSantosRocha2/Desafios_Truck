@@ -21,6 +21,7 @@
 		C73C11FB2D70A26D003EE60A /* LocalizaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C11FA2D70A26D003EE60A /* LocalizaView.swift */; };
 		C73C11FD2D70A28D003EE60A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C11FC2D70A28D003EE60A /* ViewModel.swift */; };
 		C73C12002D70A8F1003EE60A /* gifMosquito.gif in Resources */ = {isa = PBXBuildFile; fileRef = C73C11FF2D70A8F1003EE60A /* gifMosquito.gif */; };
+		C74B3D1C2D7F0622001B331B /* InfosEspecialistas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3D1B2D7F0622001B331B /* InfosEspecialistas.swift */; };
 		C783E44B2D71F05100642C7C /* Sintomas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E44A2D71F05100642C7C /* Sintomas.swift */; };
 		C783E44D2D71F3C700642C7C /* Medicamentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E44C2D71F3C700642C7C /* Medicamentos.swift */; };
 		C783E44F2D71FCA000642C7C /* Especialistas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E44E2D71FCA000642C7C /* Especialistas.swift */; };
@@ -61,6 +62,7 @@
 		C73C11FA2D70A26D003EE60A /* LocalizaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizaView.swift; sourceTree = "<group>"; };
 		C73C11FC2D70A28D003EE60A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C73C11FF2D70A8F1003EE60A /* gifMosquito.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gifMosquito.gif; path = ../../gifMosquito.gif; sourceTree = "<group>"; };
+		C74B3D1B2D7F0622001B331B /* InfosEspecialistas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosEspecialistas.swift; sourceTree = "<group>"; };
 		C783E44A2D71F05100642C7C /* Sintomas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sintomas.swift; sourceTree = "<group>"; };
 		C783E44C2D71F3C700642C7C /* Medicamentos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicamentos.swift; sourceTree = "<group>"; };
 		C783E44E2D71FCA000642C7C /* Especialistas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Especialistas.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		C73C11BC2D70A179003EE60A = {
 			isa = PBXGroup;
 			children = (
+				C74B3D1B2D7F0622001B331B /* InfosEspecialistas.swift */,
 				C783E44E2D71FCA000642C7C /* Especialistas.swift */,
 				C783E44C2D71F3C700642C7C /* Medicamentos.swift */,
 				C783E44A2D71F05100642C7C /* Sintomas.swift */,
@@ -296,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C74B3D1C2D7F0622001B331B /* InfosEspecialistas.swift in Sources */,
 				C73C11F52D70A1EE003EE60A /* AnaliseView.swift in Sources */,
 				C783E44F2D71FCA000642C7C /* Especialistas.swift in Sources */,
 				C73C11F92D70A237003EE60A /* InicioView.swift in Sources */,

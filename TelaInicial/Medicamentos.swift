@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct Medicamentos: View {
+    
     var body: some View {
         ZStack{
             VStack{
