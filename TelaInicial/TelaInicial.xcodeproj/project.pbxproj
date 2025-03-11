@@ -25,6 +25,7 @@
 		C783E44B2D71F05100642C7C /* Sintomas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E44A2D71F05100642C7C /* Sintomas.swift */; };
 		C783E44D2D71F3C700642C7C /* Medicamentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E44C2D71F3C700642C7C /* Medicamentos.swift */; };
 		C783E44F2D71FCA000642C7C /* Especialistas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C783E44E2D71FCA000642C7C /* Especialistas.swift */; };
+		C79DDEC02D80583900A8A844 /* ViewModelFeedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DDEBF2D80583900A8A844 /* ViewModelFeedbacks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		C783E44A2D71F05100642C7C /* Sintomas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sintomas.swift; sourceTree = "<group>"; };
 		C783E44C2D71F3C700642C7C /* Medicamentos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicamentos.swift; sourceTree = "<group>"; };
 		C783E44E2D71FCA000642C7C /* Especialistas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Especialistas.swift; sourceTree = "<group>"; };
+		C79DDEBF2D80583900A8A844 /* ViewModelFeedbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFeedbacks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		C73C11BC2D70A179003EE60A = {
 			isa = PBXGroup;
 			children = (
+				C79DDEBF2D80583900A8A844 /* ViewModelFeedbacks.swift */,
 				C74B3D1B2D7F0622001B331B /* InfosEspecialistas.swift */,
 				C783E44E2D71FCA000642C7C /* Especialistas.swift */,
 				C783E44C2D71F3C700642C7C /* Medicamentos.swift */,
@@ -305,6 +308,7 @@
 				C73C11F92D70A237003EE60A /* InicioView.swift in Sources */,
 				C73C11FB2D70A26D003EE60A /* LocalizaView.swift in Sources */,
 				C73C11CB2D70A179003EE60A /* ContentView.swift in Sources */,
+				C79DDEC02D80583900A8A844 /* ViewModelFeedbacks.swift in Sources */,
 				C73C11C92D70A179003EE60A /* TelaInicialApp.swift in Sources */,
 				C73C11F72D70A218003EE60A /* infoView.swift in Sources */,
 				C73C11FD2D70A28D003EE60A /* ViewModel.swift in Sources */,

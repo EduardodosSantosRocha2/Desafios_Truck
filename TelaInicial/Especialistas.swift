@@ -15,10 +15,8 @@ struct InfosEspecialistasStruct: Identifiable, Hashable {
 }
 
 struct Especialistas: View {
-    
     @State private var showingSheetEsp: [Bool]
-    
-    
+
     let infos = [
         InfosEspecialistasStruct(nome: "Dra. Bianca Eliza Hoekstra", latitude: -25.104483958735976, longitude: -50.16374642596675, numeroRegistro: "PR 36825", RQE: "29788", cidade: "Ponta Grossa (Paraná)", telefone: "(42) 3026-8001", endereco: "R. Nilo Peçanha, 1361 - Estrela", img: "https://s3-sa-east-1.amazonaws.com/doctoralia.com.br/doctor/99d2be/99d2be7dfe44d3faa563ade0bba163ad_220_square.jpg"),
         InfosEspecialistasStruct(nome: "Dr. Alexandre Blikstad Mauro", latitude: -23.18590684476899, longitude: -46.89716927325076, numeroRegistro: "SP 161803", RQE: "68772", cidade: "Jundiaí (São Paulo)", telefone: "(11) 3109-9941", endereco: "R. Major Gustavo Storch, 125, Sala 402, Vila Virgínia", img: "https://s3-sa-east-1.amazonaws.com/doctoralia.com.br/doctor/333454/3334549e3d570357e3da9f394f5c2ab2_large.jpg"),

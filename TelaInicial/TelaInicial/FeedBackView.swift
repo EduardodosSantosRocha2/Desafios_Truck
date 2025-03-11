@@ -3,6 +3,7 @@ import SwiftUI
 struct FeedBackView: View {
     @State private var userOpinion: String = ""
     @State private var showMessageSentAlert = false // Estado para exibir o pop-up
+    @StateObject var viewModelFeedback = ViewModelFeedbacks()
     var body: some View {
         VStack {
          
@@ -53,6 +54,7 @@ struct FeedBackView: View {
                     Image(systemName: "star.fill")
                         .foregroundColor(.yellow)
                         .padding(.trailing, 6)
+                   
                 }
             }
             .padding()
@@ -65,11 +67,14 @@ struct FeedBackView: View {
     
    
     func enviarMensagem() {
+        
         if !userOpinion.isEmpty {
             print("Mensagem enviada: \(userOpinion)")
-            userOpinion = ""
+            viewModelFeedback.fetchJSON(mensage: userOpinion)
             showMessageSentAlert = true
+            
         }
+        userOpinion = ""
     }
 }
 
